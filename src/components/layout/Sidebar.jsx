@@ -41,7 +41,7 @@ export default function Sidebar({ className, isMobile, onClose }) {
             alt="Expensify Logo"
             className="w-9 h-9 object-contain rounded-xl shadow-lg shadow-primary/10"
           />
-          <span className="font-extrabold text-xl tracking-tight bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:text-primary transition-colors duration-300">
+          <span className="font-extrabold text-xl tracking-tight text-primary transition-colors duration-300">
             Expensify
           </span>
         </Link>
