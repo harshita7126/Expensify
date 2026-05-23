@@ -96,29 +96,27 @@ export default function Sidebar({ className, isMobile, onClose }) {
       </nav>
 
       {/* User Badge Profile Section */}
-      {!isMobile && (
-        <div className="p-4 border-t border-border mt-auto">
-          <div className="flex items-center justify-between gap-3 bg-muted/30 hover:bg-muted/60 border border-border/40 hover:border-border/80 p-3 rounded-2xl transition-all duration-300 shadow-sm group">
-            <div className="flex items-center gap-3 min-w-0 flex-1">
-              <div className="relative flex-shrink-0">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-400 via-indigo-400 to-pink-500 shadow-md group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-success border-2 border-card rounded-full" />
-              </div>
-              <div className="min-w-0 flex-1">
-                <p className="text-xs font-bold text-foreground truncate group-hover:text-primary transition-colors">{displayName}</p>
-                <p className="text-[10px] text-muted-foreground font-medium truncate">{emailName}</p>
-              </div>
+      <div className="p-4 border-t border-border mt-auto">
+        <div className="flex items-center justify-between gap-3 bg-muted/30 hover:bg-muted/60 border border-border/40 hover:border-border/80 p-3 rounded-2xl transition-all duration-300 shadow-sm group">
+          <div className="flex items-center gap-3 min-w-0 flex-1">
+            <div className="relative flex-shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-400 via-indigo-400 to-pink-500 shadow-md group-hover:scale-105 transition-transform duration-300" />
+              <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-success border-2 border-card rounded-full" />
             </div>
-            <button
-              onClick={handleLogout}
-              title="Sign Out"
-              className="p-2 hover:bg-danger/10 text-muted-foreground hover:text-danger rounded-xl border border-transparent hover:border-danger/20 transition-all cursor-pointer flex-shrink-0"
-            >
-              <LogOut className="w-4.5 h-4.5" />
-            </button>
+            <div className="min-w-0 flex-1">
+              <p className="text-xs font-bold text-foreground truncate group-hover:text-primary transition-colors">{displayName}</p>
+              <p className="text-[10px] text-muted-foreground font-medium truncate">{emailName}</p>
+            </div>
           </div>
+          <button
+            onClick={handleLogout}
+            title="Sign Out"
+            className="p-2 hover:bg-danger/10 text-muted-foreground hover:text-danger rounded-xl border border-transparent hover:border-danger/20 transition-all cursor-pointer flex-shrink-0"
+          >
+            <LogOut className="w-4.5 h-4.5" />
+          </button>
         </div>
-      )}
+      </div>
     </aside>
   );
 }
