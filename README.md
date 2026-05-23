@@ -50,19 +50,19 @@ A modern personal finance management web application built with React, Supabase,
 git clone https://github.com/harshita7126/Expensify.git
 ```
 
-2. Navigate to the project folder:
+1. Navigate to the project folder:
 
 ```bash
 cd Expensify
 ```
 
-3. Install dependencies:
+1. Install dependencies:
 
 ```bash
 npm install
 ```
 
-4. Configure environment variables:
+1. Configure environment variables:
 
 Copy `.env.example` to `.env`
 
@@ -77,7 +77,7 @@ VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-5. Run the database schema from:
+1. Run the database schema from:
 
 ```bash
 database/schema.sql
@@ -85,7 +85,7 @@ database/schema.sql
 
 inside your Supabase SQL Editor.
 
-6. Start the development server:
+1. Start the development server:
 
 ```bash
 npm run dev
