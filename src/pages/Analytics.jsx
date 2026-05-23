@@ -2,8 +2,9 @@ import { useMemo, useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend } from 'recharts';
 import { useNavigate } from 'react-router-dom';
+import { isSameMonth, parseISO } from 'date-fns';
 
-import { getExpensesByCategory, getMonthlyTrend, calculateTotalExpenses, calculateMonthlyExpenses } from '../lib/calculations';
+import { getExpensesByCategory, getMonthlyTrend, calculateTotalExpenses } from '../lib/calculations';
 import { cn, formatINR } from '../lib/utils';
 import { PieChart as PieIcon, BarChart2, Sparkles } from 'lucide-react';
 import EmptyState from '../components/EmptyState';
@@ -103,18 +104,22 @@ export default function Analytics() {
     }
   }, [user]);
 
-  const categoryData = useMemo(() => getExpensesByCategory(expenses), [expenses]);
+  const currentMonthExpenses = useMemo(() => {
+    const now = new Date();
+    return expenses.filter(expense => isSameMonth(parseISO(expense.date), now));
+  }, [expenses]);
+
+  const categoryData = useMemo(() => getExpensesByCategory(currentMonthExpenses), [currentMonthExpenses]);
   const trendData = useMemo(() => getMonthlyTrend(expenses, monthlyIncome), [expenses, monthlyIncome]);
-  const totalSpent = useMemo(() => calculateTotalExpenses(expenses), [expenses]);
-  const currentMonthlySpent = useMemo(() => calculateMonthlyExpenses(expenses), [expenses]);
+  const currentMonthlySpent = useMemo(() => calculateTotalExpenses(currentMonthExpenses), [currentMonthExpenses]);
 
   // Calculate percentages for categories
   const enrichedCategoryData = useMemo(() => {
     return categoryData.map(c => ({
       ...c,
-      percentage: totalSpent > 0 ? ((c.value / totalSpent) * 100).toFixed(0) : '0'
+      percentage: currentMonthlySpent > 0 ? ((c.value / currentMonthlySpent) * 100).toFixed(0) : '0'
     }));
-  }, [categoryData, totalSpent]);
+  }, [categoryData, currentMonthlySpent]);
 
   if (isLoading) {
     return (
