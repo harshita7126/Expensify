@@ -450,7 +450,7 @@ export default function Dashboard() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground font-medium text-sm md:text-base"
           >
-            Here's a premium, real-time breakdown of your personal finances.
+            Track your spending, savings, and weekly financial activity in one place.
           </motion.p>
         </div>
         <motion.button
