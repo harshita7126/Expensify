@@ -34,13 +34,13 @@ export default function Sidebar({ className, isMobile, onClose }) {
       {/* Brand Logo Header */}
       <div className="h-16 flex items-center px-6 border-b border-border justify-between">
         <Link to="/" className="flex items-center gap-3 group" onClick={() => onClose && onClose()}>
-          <motion.div 
+          <motion.img 
             whileHover={{ scale: 1.08, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
-            className="w-9 h-9 rounded-xl bg-gradient-to-tr from-primary to-pink-500 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-primary/20"
-          >
-            E
-          </motion.div>
+            src="/wallet-icon.png"
+            alt="Expensify Logo"
+            className="w-9 h-9 object-contain rounded-xl shadow-lg shadow-primary/10"
+          />
           <span className="font-extrabold text-xl tracking-tight bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:text-primary transition-colors duration-300">
             Expensify
           </span>
@@ -100,7 +100,9 @@ export default function Sidebar({ className, isMobile, onClose }) {
         <div className="flex items-center justify-between gap-3 bg-muted/30 hover:bg-muted/60 border border-border/40 hover:border-border/80 p-3 rounded-2xl transition-all duration-300 shadow-sm group">
           <div className="flex items-center gap-3 min-w-0 flex-1">
             <div className="relative flex-shrink-0">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-400 via-indigo-400 to-pink-500 shadow-md group-hover:scale-105 transition-transform duration-300" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-400 via-indigo-400 to-pink-500 shadow-md group-hover:scale-105 transition-transform duration-300 flex items-center justify-center text-white font-black text-lg select-none">
+                {displayName.charAt(0).toUpperCase()}
+              </div>
               <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-success border-2 border-card rounded-full" />
             </div>
             <div className="min-w-0 flex-1">

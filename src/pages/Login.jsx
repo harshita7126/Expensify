@@ -89,13 +89,13 @@ export default function Login() {
         {/* Brand Header */}
         <div className="text-center mb-8">
           <div className="flex justify-center items-center gap-3.5 mb-3">
-            <motion.div
+            <motion.img 
               whileHover={{ scale: 1.08, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
-              className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-primary to-pink-500 flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-primary/25"
-            >
-              E
-            </motion.div>
+              src="/wallet-icon.png"
+              alt="Expensify Logo"
+              className="w-11 h-11 object-contain rounded-2xl shadow-xl shadow-primary/15"
+            />
             <span className="font-extrabold text-2xl tracking-tight text-gradient">
               Expensify
             </span>

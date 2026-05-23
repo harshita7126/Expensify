@@ -223,7 +223,9 @@ export default function Settings() {
           <div className="flex items-center justify-between gap-3 bg-muted/20 hover:bg-muted/40 border border-border/40 hover:border-border/70 p-3 rounded-2xl transition-all duration-300 shadow-sm group">
             <div className="flex items-center gap-3 min-w-0 flex-1">
               <div className="relative flex-shrink-0">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-400 via-indigo-400 to-pink-500 shadow-md group-hover:scale-105 transition-transform duration-300" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-400 via-indigo-400 to-pink-500 shadow-md group-hover:scale-105 transition-transform duration-300 flex items-center justify-center text-white font-black text-lg select-none">
+                  {(user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'User').charAt(0).toUpperCase()}
+                </div>
                 <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-success border-2 border-card rounded-full" />
               </div>
               <div className="min-w-0 flex-1">
