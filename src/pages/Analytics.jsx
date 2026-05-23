@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend } from 'recharts';
 import { useNavigate } from 'react-router-dom';
 
-import { getExpensesByCategory, getMonthlyTrend, calculateTotalExpenses } from '../lib/calculations';
+import { getExpensesByCategory, getMonthlyTrend, calculateTotalExpenses, calculateMonthlyExpenses } from '../lib/calculations';
 import { cn, formatINR } from '../lib/utils';
 import { PieChart as PieIcon, BarChart2, Sparkles } from 'lucide-react';
 import EmptyState from '../components/EmptyState';
@@ -106,6 +106,7 @@ export default function Analytics() {
   const categoryData = useMemo(() => getExpensesByCategory(expenses), [expenses]);
   const trendData = useMemo(() => getMonthlyTrend(expenses, monthlyIncome), [expenses, monthlyIncome]);
   const totalSpent = useMemo(() => calculateTotalExpenses(expenses), [expenses]);
+  const currentMonthlySpent = useMemo(() => calculateMonthlyExpenses(expenses), [expenses]);
 
   // Calculate percentages for categories
   const enrichedCategoryData = useMemo(() => {
@@ -231,8 +232,13 @@ export default function Analytics() {
               )}
 
               <div className="absolute inset-0 flex items-center justify-center flex-col pointer-events-none text-center px-4">
-                <span className="text-2xl font-black text-foreground">{formatINR(totalSpent)}</span>
-                <span className="text-[10px] font-bold text-muted-foreground/80 uppercase tracking-widest mt-1">Total Spent</span>
+                <span className="text-xl font-black text-foreground">{formatINR(currentMonthlySpent)}</span>
+                <span className="text-[9px] font-bold text-muted-foreground/75 uppercase tracking-wider mt-0.5">Monthly Spent</span>
+                
+                <div className="w-16 h-[1px] bg-border/50 my-1.5" />
+                
+                <span className="text-sm font-black text-emerald-500">{formatINR(monthlyIncome)}</span>
+                <span className="text-[9px] font-bold text-muted-foreground/75 uppercase tracking-wider">Income</span>
               </div>
             </div>
 

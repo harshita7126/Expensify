@@ -146,7 +146,7 @@ export default function Expenses() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground font-medium text-sm md:text-base"
           >
-            Manage and track all your transactions in one centralized dashboard.
+            View, search, and manage your expenses in one place.
           </motion.p>
         </div>
         <motion.button

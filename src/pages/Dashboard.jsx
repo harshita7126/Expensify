@@ -377,9 +377,9 @@ export default function Dashboard() {
   }, [timeframe, customStartDate, customEndDate]);
 
   const chartTitle = useMemo(() => {
-    if (timeframe === 'week') return 'Weekly Spending Dynamics';
-    if (timeframe === 'month') return 'Daily Spending Dynamics';
-    if (timeframe === '3months') return '3-Month Spending Dynamics';
+    if (timeframe === 'week') return 'Weekly Spending Overview';
+    if (timeframe === 'month') return 'Daily Spending Overview';
+    if (timeframe === '3months') return '3-Month Spending Overview';
     if (timeframe === '6months') return '6-Month Cash Flow';
     return 'Custom Cash Flow';
   }, [timeframe]);
@@ -450,7 +450,7 @@ export default function Dashboard() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground font-medium text-sm md:text-base"
           >
-            Track your spending, savings, and weekly financial activity in one place.
+            Track your spending, savings, and weekly financial activity.
           </motion.p>
         </div>
         <motion.button
