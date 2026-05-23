@@ -1,69 +1,120 @@
-# Expensify - Premium Personal Expense Manager
+# Expensify - Personal Expense Manager
 
-A production-grade, highly polished Personal Expense Manager web application built with a modern React tech stack.
+A modern personal finance management web application built with React, Supabase, and Tailwind CSS.
 
 ## Tech Stack
-- React + Vite
-- TypeScript
-- Tailwind CSS v4
-- Framer Motion
-- Recharts
-- Supabase (Auth + PostgreSQL)
-- Zustand (State Management)
-- React Router
+
+* React + Vite
+* JavaScript
+* Tailwind CSS
+* Framer Motion
+* Recharts
+* Supabase (Authentication + Database)
+* Zustand (State Management)
+* React Router
 
 ## Features
-- **Dashboard**: High-level overview of total balance, monthly spending, savings, and animated Recharts analytics.
-- **Expenses**: View, search, and filter transactions.
-- **Analytics**: Deep dive into spending categories and monthly income vs. expenses trends.
-- **Budgets**: Set and monitor category limits with progress bars and warnings.
-- **Settings**: Toggle between sleek dark mode and light mode, update profile details.
-- **Glassmorphism UI**: Premium visual design with blurs, gradients, and subtle hover animations using Framer Motion.
+
+* **Dashboard**: Overview of balance, monthly spending, savings, and analytics charts.
+* **Expenses**: Add, search, filter, and manage transactions.
+* **Analytics**: Visual insights into expenses, income, and spending categories.
+* **Budgets**: Create category budgets and track spending progress.
+* **Authentication**: Secure login and signup using Supabase Auth.
+* **Responsive UI**: Optimized for desktop, tablet, and mobile devices.
+* **Dark Mode**: Toggle between light and dark themes.
+* **Toast Notifications**: Success and error feedback for important actions.
 
 ## Folder Structure
-```
+
+```bash
 .
-├── database/            # Supabase SQL schemas and RLS policies
+├── database/            # Supabase SQL schema and policies
+├── public/              # Static assets
 ├── src/
-│   ├── components/      # Reusable UI components (Sidebar, Header, Layout)
-│   ├── hooks/           # Custom React hooks
+│   ├── components/      # Reusable UI components
 │   ├── lib/             # Utility functions and Supabase client
-│   ├── pages/           # Application route pages
+│   ├── pages/           # Application pages
 │   ├── store/           # Zustand state management
-│   ├── types/           # TypeScript definitions
-│   ├── App.tsx          # App routing
-│   └── main.tsx         # Entry point
-└── ...
+│   ├── App.jsx          # Main application routes
+│   └── main.jsx         # Application entry point
+├── .env.example
+├── package.json
+└── vite.config.js
 ```
 
 ## Setup Instructions
-1. Clone this repository and navigate to the root directory.
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Set up your Supabase project and run the SQL query from `database/schema.sql` in your Supabase SQL Editor.
-4. Copy `.env.example` to `.env` and add your Supabase URL and Anon Key.
-   ```bash
-   cp .env.example .env
-   ```
-5. Start the development server:
-   ```bash
-   npm run dev
-   ```
 
-## Deployment Guide (Vercel)
-1. Push your code to a GitHub repository.
-2. Go to [Vercel](https://vercel.com/) and create a new project.
-3. Import your GitHub repository.
-4. Ensure the Framework Preset is set to `Vite`.
-5. Add the Environment Variables:
-   - `VITE_SUPABASE_URL`
-   - `VITE_SUPABASE_ANON_KEY`
-6. Click Deploy. Vercel will automatically build and deploy your application.
+1. Clone the repository:
+
+```bash
+git clone https://github.com/harshita7126/Expensify.git
+```
+
+2. Navigate to the project folder:
+
+```bash
+cd Expensify
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Configure environment variables:
+
+Copy `.env.example` to `.env`
+
+```bash
+cp .env.example .env
+```
+
+Add your Supabase credentials inside `.env`:
+
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+5. Run the database schema from:
+
+```bash
+database/schema.sql
+```
+
+inside your Supabase SQL Editor.
+
+6. Start the development server:
+
+```bash
+npm run dev
+```
+
+## Deployment (Vercel)
+
+1. Push the repository to GitHub.
+2. Import the repository into Vercel.
+3. Set the framework preset to `Vite`.
+4. Add environment variables:
+
+   * `VITE_SUPABASE_URL`
+   * `VITE_SUPABASE_ANON_KEY`
+5. Deploy the project.
 
 ## Screenshots
-*(Replace with actual application screenshots)*
-- `Dashboard View`
-- `Analytics View`
-- `Budgets View`
+
+Add application screenshots here after deployment.
+
+* Dashboard
+* Expenses
+* Analytics
+* Budgets
+
+## Future Improvements
+
+* Export expense reports
+* Recurring transactions
+* Email notifications
+* Advanced analytics filters
+* Multi-currency support
