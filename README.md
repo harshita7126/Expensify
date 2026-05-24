@@ -1,6 +1,7 @@
 # Expensify - Personal Expense Manager
 
 Expensify is a full-stack personal finance tracker that helps users manage expenses, analyze spending patterns, and monitor category budgets through interactive dashboards and analytics.
+The application combines secure authentication, real-time database operations, interactive data visualization, and responsive UI architecture into a modern finance management experience.
 
 ## Live Demo
 
@@ -63,19 +64,19 @@ Expensify is a full-stack personal finance tracker that helps users manage expen
 git clone https://github.com/harshita7126/Expensify.git
 ```
 
-1. Navigate to the project folder:
+2. Navigate to the project folder:
 
 ```bash
 cd Expensify
 ```
 
-2. Install dependencies:
+3. Install dependencies:
 
 ```bash
 npm install
 ```
 
-3. Configure environment variables:
+4. Configure environment variables:
 
 Copy `.env.example` to `.env`
 
@@ -90,7 +91,7 @@ VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-1. Run the database schema from:
+5. Run the database schema from:
 
 ```bash
 database/schema.sql
@@ -98,7 +99,7 @@ database/schema.sql
 
 inside your Supabase SQL Editor.
 
-2. Start the development server:
+6. Start the development server:
 
 ```bash
 npm run dev
@@ -137,3 +138,7 @@ npm run dev
 * Email notifications
 * Advanced analytics filters
 * Multi-currency support
+
+## License
+
+MIT License
