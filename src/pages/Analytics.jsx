@@ -237,13 +237,8 @@ export default function Analytics() {
               )}
 
               <div className="absolute inset-0 flex items-center justify-center flex-col pointer-events-none text-center px-4">
-                <span className="text-xl font-black text-foreground">{formatINR(currentMonthlySpent)}</span>
-                <span className="text-[9px] font-bold text-muted-foreground/75 uppercase tracking-wider mt-0.5">Monthly Spent</span>
-                
-                <div className="w-16 h-[1px] bg-border/50 my-1.5" />
-                
-                <span className="text-sm font-black text-emerald-500">{formatINR(monthlyIncome)}</span>
-                <span className="text-[9px] font-bold text-muted-foreground/75 uppercase tracking-wider">Income</span>
+                <span className="text-2xl font-black text-foreground">{formatINR(currentMonthlySpent)}</span>
+                <span className="text-[10px] font-bold text-muted-foreground/80 uppercase tracking-widest mt-1">Total Spent</span>
               </div>
             </div>
 
