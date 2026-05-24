@@ -1,6 +1,19 @@
 # Expensify - Personal Expense Manager
 
-A modern personal finance management web application built with React, Supabase, and Tailwind CSS.
+Expensify is a full-stack personal finance tracker that helps users manage expenses, analyze spending patterns, and monitor category budgets through interactive dashboards and analytics.
+
+## Live Demo
+
+[Visit Expensify](https://expensify-kappa.vercel.app)
+
+## Key Highlights
+
+- Real-time expense tracking
+- Interactive analytics dashboards
+- Budget monitoring system
+- Secure authentication with Supabase
+- Fully responsive modern UI
+- Persistent dark mode support
 
 ## Tech Stack
 
@@ -56,13 +69,13 @@ git clone https://github.com/harshita7126/Expensify.git
 cd Expensify
 ```
 
-1. Install dependencies:
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-1. Configure environment variables:
+3. Configure environment variables:
 
 Copy `.env.example` to `.env`
 
@@ -85,7 +98,7 @@ database/schema.sql
 
 inside your Supabase SQL Editor.
 
-1. Start the development server:
+2. Start the development server:
 
 ```bash
 npm run dev
@@ -104,12 +117,18 @@ npm run dev
 
 ## Screenshots
 
-Add application screenshots here after deployment.
+### Dashboard
+<img width="1919" height="893" alt="image" src="https://github.com/user-attachments/assets/56ba8d01-d073-4864-94ba-92941c193955" />
 
-* Dashboard
-* Expenses
-* Analytics
-* Budgets
+### Expenses
+<img width="1915" height="896" alt="image" src="https://github.com/user-attachments/assets/de829bce-2120-4262-b9e7-6499795f5f35" />
+
+### Analytics
+<img width="1919" height="894" alt="image" src="https://github.com/user-attachments/assets/9e66c5b5-0f5f-415b-bbde-30f299c8613e" />
+
+### Budgets
+<img width="1919" height="896" alt="image" src="https://github.com/user-attachments/assets/ec786341-9f9e-4cf0-b826-6c9fc1361ca4" />
+
 
 ## Future Improvements
 
