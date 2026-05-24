@@ -1,7 +1,6 @@
 # Expensify - Personal Expense Manager
 
 Expensify is a full-stack personal finance tracker that helps users manage expenses, analyze spending patterns, and monitor category budgets through interactive dashboards and analytics.
-The application combines secure authentication, real-time database operations, interactive data visualization, and responsive UI architecture into a modern finance management experience.
 
 ## Live Demo
 
