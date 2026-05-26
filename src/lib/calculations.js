@@ -91,7 +91,7 @@ export const getMonthlyTrend = (expenses, monthlyIncome) => {
 
     result.push({
       name: monthName,
-      income: monthlyIncome, // Assuming static income for educational purposes
+      income: i === 0 ? monthlyIncome : 70000, // Assuming static income for educational purposes
       expenses: spent
     });
   }
